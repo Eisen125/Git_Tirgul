@@ -82,7 +82,7 @@
   .panel h2 {
     font-size: 1.7rem;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 6px;
     font-weight: 600;
   }
 
@@ -254,6 +254,7 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       errorEl.textContent = '';
+      const name = form.value.trim()
 
       const email = form.email.value.trim();
       const password = form.password.value;
@@ -268,6 +269,9 @@
         form.password.focus();
         return;
       }
+
+
+
 
       // Front-end only: wire this up to your backend / auth endpoint.
       errorEl.style.color = '#2e7d32';
